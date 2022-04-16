@@ -1,0 +1,2 @@
+class PeerEvaluation < ApplicationRecord
+end

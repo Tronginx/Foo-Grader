@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @peer_evaluation.title %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @peer_evaluation.grade %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @peer_evaluation.comment %>
+</p>
+
+<p>
+  <strong>Commenter:</strong>
+  <%= @peer_evaluation.commenter %>
+</p>
+
+<%= link_to 'Edit', edit_peer_evaluation_path(@peer_evaluation) %> |
+<%= link_to 'Back', peer_evaluations_path %>

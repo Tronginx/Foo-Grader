@@ -1,0 +1,32 @@
+<%= form_with(model: peer_comment) do |form| %>
+  <% if peer_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(peer_comment.errors.count, "error") %> prohibited this peer_comment from being saved:</h2>
+
+      <ul>
+        <% peer_comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commenter %>
+    <%= form.text_field :commenter %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

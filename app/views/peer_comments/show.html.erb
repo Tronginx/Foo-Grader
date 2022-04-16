@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @peer_comment.title %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @peer_comment.comment %>
+</p>
+
+<p>
+  <strong>Commenter:</strong>
+  <%= @peer_comment.commenter %>
+</p>
+
+<%= link_to 'Edit', edit_peer_comment_path(@peer_comment) %> |
+<%= link_to 'Back', peer_comments_path %>

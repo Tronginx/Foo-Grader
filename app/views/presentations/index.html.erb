@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Presentations</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Grade</th>
+      <th>Comment</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @presentations.each do |presentation| %>
+      <tr>
+        <td><%= presentation.title %></td>
+        <td><%= presentation.author %></td>
+        <td><%= presentation.grade %></td>
+        <td><%= presentation.comment %></td>
+        <td><%= presentation.time %></td>
+
+        
+        
+        <%if user_signed_in?%>
+        <td><%= link_to 'Show', presentation %></td>
+        <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+        <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
+
+        
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Presentation', new_presentation_path %>

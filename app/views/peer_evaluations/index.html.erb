@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Peer Evaluations</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Grade</th>
+      <th>Comment</th>
+      <th>Commenter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peer_evaluations.each do |peer_evaluation| %>
+      <tr>
+        <td><%= peer_evaluation.title %></td>
+        <td><%= peer_evaluation.grade %></td>
+        <td><%= peer_evaluation.comment %></td>
+        <td><%= peer_evaluation.commenter %></td>
+        <td><%= link_to 'Show', peer_evaluation %></td>
+        <td><%= link_to 'Edit', edit_peer_evaluation_path(peer_evaluation) %></td>
+        <td><%= link_to 'Destroy', peer_evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peer Evaluation', new_peer_evaluation_path %>

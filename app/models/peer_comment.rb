@@ -1,0 +1,2 @@
+class PeerComment < ApplicationRecord
+end

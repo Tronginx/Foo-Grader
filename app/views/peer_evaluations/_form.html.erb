@@ -1,0 +1,44 @@
+<%= form_with(model: peer_evaluation) do |form| %>
+  <% if peer_evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(peer_evaluation.errors.count, "error") %> prohibited this peer_evaluation from being saved:</h2>
+
+      <ul>
+        <% peer_evaluation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title,
+    class:"form-control" %>
+
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :grade %>
+    <%= form.text_field :grade,
+        class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :comment %>
+    <%= form.text_field :comment,
+        class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :commenter %>
+    <%= form.text_field :commenter,
+        class:"form-control" %>
+  </div>
+
+<br>
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<br>
+<% end %>

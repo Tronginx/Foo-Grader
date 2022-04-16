@@ -1,0 +1,2 @@
+module PeerCommentsHelper
+end

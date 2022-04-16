@@ -1,0 +1,49 @@
+<%= form_with(model: presentation) do |form| %>
+  <% if presentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+        <% presentation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title,
+        class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :author %>
+    <%= form.text_field :author,
+      class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :grade %>
+    <%= form.text_field :grade,
+      class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :comment %>
+    <%= form.text_field :comment,
+      class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :time %>
+    <%= form.text_field :time,
+      class:"form-control" %>
+  </div>
+
+<br>
+  <div class="actions">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<br>
+<% end %>
