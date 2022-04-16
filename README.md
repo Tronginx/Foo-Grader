@@ -1,10 +1,7 @@
-# Project6
+# Foo Grader
 
-#### Team 1
 
-#### Team members: Alan Wu, Boru Zhu, Noah Marsteller, Thomas Phelan, Tron Tian
-
-Requirement:
+Features:
 
 1. admin creates presentation events
 2. audience submit score and comments
